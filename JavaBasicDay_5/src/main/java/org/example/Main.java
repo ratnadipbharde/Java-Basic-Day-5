@@ -20,8 +20,28 @@ public class Main {
                 break;
             case 4:
                 obj.harmonicNumber();
+                break;
+            case 5:
+                obj.primeFactor();
+                break;
             default:
                 System.out.println("invalid choice");
+        }
+    }
+
+    private void primeFactor() {
+        System.out.println("Enter number :");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        System.out.println("Factor is :-");
+        for (int i = 2; i < number; i++) {
+            while (number % i == 0) {
+                System.out.println(i + " ");
+                number = number / i;
+            }
+        }
+        if (number > 2) {
+            System.out.println(number);
         }
     }
 
