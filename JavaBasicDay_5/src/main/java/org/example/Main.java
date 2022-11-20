@@ -24,9 +24,23 @@ public class Main {
             case 5:
                 obj.primeFactor();
                 break;
+            case 6:
+                obj.getQuotientAndRemainder();
+                break;
             default:
                 System.out.println("invalid choice");
         }
+    }
+
+    private void getQuotientAndRemainder() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter dividend :");
+        int dividend  = sc.nextInt();
+        System.out.print("Enter divisor :");
+        int divisor  = sc.nextInt();
+        int quotient = dividend / divisor;
+        int remainder = dividend % divisor;
+        System.out.println("Quotient is = " + quotient +" Remainder is = " + remainder);
     }
 
     private void primeFactor() {
