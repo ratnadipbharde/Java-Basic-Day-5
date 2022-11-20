@@ -45,9 +45,26 @@ public class Main {
             case 9:
                 obj.isVowel();
                 break;
+            case 10:
+                obj.largestAmongThreeNumber();
             default:
                 System.out.println("invalid choice");
         }
+    }
+
+    private void largestAmongThreeNumber() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st Number :");
+        int first = sc.nextInt();
+        System.out.print("Enter 2nd Number :");
+        int second = sc.nextInt();
+        System.out.print("Enter 2nd Number :");
+        int third = sc.nextInt();
+        if (first > second && first > third)
+            System.out.println(first + " is Largest number");
+        else if (second > first && second > third)
+            System.out.println(second + " is Largest number");
+        else System.out.println(third + " is Largest number");
     }
 
     private void isVowel() {
