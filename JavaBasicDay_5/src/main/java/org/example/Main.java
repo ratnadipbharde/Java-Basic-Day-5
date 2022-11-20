@@ -4,6 +4,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("1. Flip Coin and print percentage of Heads and Tails");
+        System.out.println("2. Leap Year");
+        System.out.println("3. Power of 2");
+        System.out.println("4. Harmonic Number");
+        System.out.println("5. Factors");
+        System.out.println("6. Java Program to Compute Quotient and Remainder");
+        System.out.println("7. Java Program to Swap Two Numbers");
+        System.out.println("8. Java Program to Check Whether a Number is Even or Odd");
+        System.out.println("9. Java Program to Check Whether an Alphabet is Vowel or Consonant");
         System.out.println("Enter Problem Number : ");
         Scanner sc = new Scanner(System.in);
         int probNumber = sc.nextInt();
@@ -33,17 +42,28 @@ public class Main {
             case 8:
                 obj.isEven();
                 break;
+            case 9:
+                obj.isVowel();
+                break;
             default:
                 System.out.println("invalid choice");
         }
+    }
+
+    private void isVowel() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Alphabet: ");
+        char ch = sc.next().charAt(0);
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+            System.out.println(ch + " is Vowel");
+        else System.out.println(ch + " is Consonant");
     }
 
     private void isEven() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Number to check Even or Odd:");
         int number = sc.nextInt();
-        if (number % 2 == 0)
-            System.out.println(number + " is even Number");
+        if (number % 2 == 0) System.out.println(number + " is even Number");
         else System.out.println(number + " is odd Number");
     }
 
