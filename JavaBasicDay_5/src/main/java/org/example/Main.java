@@ -47,6 +47,7 @@ public class Main {
                 break;
             case 10:
                 obj.largestAmongThreeNumber();
+                break;
             default:
                 System.out.println("invalid choice");
         }
