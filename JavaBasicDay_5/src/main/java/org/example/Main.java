@@ -27,9 +27,26 @@ public class Main {
             case 6:
                 obj.getQuotientAndRemainder();
                 break;
+            case 7:
+                obj.swap();
+                break;
             default:
                 System.out.println("invalid choice");
         }
+    }
+
+    private void swap() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st Number :");
+        int first  = sc.nextInt();
+        System.out.print("Enter 2nd Number :");
+        int second  = sc.nextInt();
+        int temp=first;
+        first=second;
+        second=temp;
+        System.out.println("After Swap");
+        System.out.println("1st Number :" +first);
+        System.out.println("2nd Number :" +second);
     }
 
     private void getQuotientAndRemainder() {
