@@ -30,34 +30,46 @@ public class Main {
             case 7:
                 obj.swap();
                 break;
+            case 8:
+                obj.isEven();
+                break;
             default:
                 System.out.println("invalid choice");
         }
     }
 
+    private void isEven() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Number to check Even or Odd:");
+        int number = sc.nextInt();
+        if (number % 2 == 0)
+            System.out.println(number + " is even Number");
+        else System.out.println(number + " is odd Number");
+    }
+
     private void swap() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter 1st Number :");
-        int first  = sc.nextInt();
+        int first = sc.nextInt();
         System.out.print("Enter 2nd Number :");
-        int second  = sc.nextInt();
-        int temp=first;
-        first=second;
-        second=temp;
+        int second = sc.nextInt();
+        int temp = first;
+        first = second;
+        second = temp;
         System.out.println("After Swap");
-        System.out.println("1st Number :" +first);
-        System.out.println("2nd Number :" +second);
+        System.out.println("1st Number :" + first);
+        System.out.println("2nd Number :" + second);
     }
 
     private void getQuotientAndRemainder() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter dividend :");
-        int dividend  = sc.nextInt();
+        int dividend = sc.nextInt();
         System.out.print("Enter divisor :");
-        int divisor  = sc.nextInt();
+        int divisor = sc.nextInt();
         int quotient = dividend / divisor;
         int remainder = dividend % divisor;
-        System.out.println("Quotient is = " + quotient +" Remainder is = " + remainder);
+        System.out.println("Quotient is = " + quotient + " Remainder is = " + remainder);
     }
 
     private void primeFactor() {
