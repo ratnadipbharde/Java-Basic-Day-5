@@ -18,7 +18,22 @@ public class Main {
             case 3:
                 obj.powerOfTwo();
                 break;
+            case 4:
+                obj.harmonicNumber();
+            default:
+                System.out.println("invalid choice");
         }
+    }
+
+    private void harmonicNumber() {
+        System.out.println("Enter number to Prints the Nth harmonic number:");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        double harmonicNumber = 0;
+        for (int i = 1; i <= number; i++) {
+            harmonicNumber = harmonicNumber + (double) 1 / i;
+        }
+        System.out.println("Harmonic number is = " + harmonicNumber);
     }
 
     private void powerOfTwo() {
@@ -39,8 +54,7 @@ public class Main {
         if (digit == 4) {
             if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
                 System.out.println(year + " is a leap year");
-            else
-                System.out.println(year + " is not a leap year");
+            else System.out.println(year + " is not a leap year");
         } else System.out.println("invalid year");
     }
 
