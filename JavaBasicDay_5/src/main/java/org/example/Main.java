@@ -7,6 +7,21 @@ public class Main {
         Main obj = new Main();
        // 1. Flip Coin and print percentage of Heads and Tails
         obj.flipCoin();
+        System.out.println("---------------------------------");
+        //2. Leap Year
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter year to check leap year or not : ");
+        int year=sc.nextInt();
+        obj.leapYear(year);
+        System.out.println("---------------------------------");
+    }
+
+    private void leapYear(int year) {
+
+        if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+            System.out.println(year+" is a leap year");
+        else
+            System.out.println(year+" is not a leap year");
     }
 
     private void flipCoin() {
